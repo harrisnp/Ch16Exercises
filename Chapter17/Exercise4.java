@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Exercise2
+public class Exercise4
 {
     public static void main(String[]args)
-    {
         Scanner scan = new Scanner (System.in);
+    {
         String name = new String();
         double strength;
         double health;
