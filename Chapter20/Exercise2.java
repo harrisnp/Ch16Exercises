@@ -5,17 +5,16 @@ public class Exercise2
     public static void main(String[]args)
     {
         Scanner scan = new Scanner (System.in);
-        int n;
-        int sum = 0;
-
-
+        double n;
+        double m = 1;
+        double sum = 0;
 
         System.out.println("Enter n: ");
-        n = scan.nextInt();
+        n = scan.nextDouble();
 
-        while (many < n) {
-            sum = 1/n + sum;
-            n = n + 1;
+        while (m <= n) {
+            sum = 1/m + sum;
+            m = m + 1;
         }
 
         System.out.println("The sum is " + sum);
