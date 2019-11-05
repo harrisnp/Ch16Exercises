@@ -7,16 +7,20 @@ public class Box {
 
     //constructor
     public Box(double wid, double hei, double len){
-        width = wid;
-        height = hei;
-        length = len;
-    }
-    public Box(Box oldBox) {
-        // return new Box(1.25*oldBox.width(), 1.25*oldBox.height(), 1.25*oldBox.length());
-    }
+        this.width = wid;
+        this.height = hei;
+        this.length = len;
+     }
 
     //methods
     
+    public Box biggerBox(Box oldBox) {
+         return new Box(oldBox.width()*1.25, oldBox.height()*1.25, oldBox.length()*1.25);
+    }
+    public Box smallerBox(Box oldBox) {
+        return new Box(oldBox.width()*.5, oldBox.height()*.5, oldBox.length()*.5);
+    }
+
     public double volume() {
         return width*height*length;       
     }
