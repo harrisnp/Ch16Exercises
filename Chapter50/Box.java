@@ -10,7 +10,12 @@ public class Box {
         this.width = wid;
         this.height = hei;
         this.length = len;
-     }
+     }  
+    //  public OutsideBox(double widt, double heig, double leng) {
+    //      this.width = widt;
+    //      this.height = heig;
+    //      this.length = leng;
+    //  }
 
     //methods
     
@@ -20,6 +25,9 @@ public class Box {
     public Box smallerBox(Box oldBox) {
         return new Box(oldBox.width()*.5, oldBox.height()*.5, oldBox.length()*.5);
     }
+    public Box outsideBox(Box oldBox) {
+        return new Box(oldBox.width()+1, oldBox.height()+1, oldBox.length()+1);
+    }    
 
     public double volume() {
         return width*height*length;       
@@ -47,4 +55,8 @@ public class Box {
     private double sideArea() {
         return height*width;
     }
+    public boolean fit() {
+        return false;  
+    }
+
 }
